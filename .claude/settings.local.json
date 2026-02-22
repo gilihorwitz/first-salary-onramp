@@ -19,7 +19,8 @@
       "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && git add . && git commit -m \"feat: add simulated login and ADP payroll sync flow\")",
       "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && git add . && git commit -m \"fix: hide bottom nav during linear onboarding flow\")",
       "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && git add . && git commit -m \"feat: add interactive budget blueprint step\")",
-      "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && git add . && git commit -m \"feat: integrate apple wallet provisioning UI to virtual card\")"
+      "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && git add . && git commit -m \"feat: integrate apple wallet provisioning UI to virtual card\")",
+      "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && git add . && git commit -m \"feat: add floating AI Co-pilot chat widget to dashboard\")"
     ]
   }
 }

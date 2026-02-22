@@ -13,6 +13,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PaycheckHealthRing from "@/components/PaycheckHealthRing";
 import BottomNav from "@/components/BottomNav";
+import AICopilot from "@/components/AICopilot";
 import {
   mockEmployee,
   EMPLOYEE_NAME,
@@ -237,6 +238,9 @@ export default function DashboardPage() {
           })}
         </motion.div>
       </div>
+
+      {/* AI Co-Pilot */}
+      <AICopilot />
 
       {/* Bottom Navigation */}
       <BottomNav />
