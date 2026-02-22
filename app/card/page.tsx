@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Wallet,
   PartyPopper,
+  CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -38,6 +39,7 @@ type CardData = {
 export default function CardPage() {
   const [phase, setPhase] = useState<"pre" | "minting" | "done">("pre");
   const [card, setCard] = useState<CardData | null>(null);
+  const [walletAdded, setWalletAdded] = useState(false);
 
   const issueCard = async () => {
     setPhase("minting");
@@ -370,27 +372,71 @@ export default function CardPage() {
                 </div>
               </motion.div>
 
-              {/* Go to Dashboard */}
+              {/* Apple Wallet */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2 }}
-                className="flex flex-col items-center gap-3 pt-4 border-t border-white/5"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.0 }}
+                className="flex flex-col items-center gap-4"
               >
-                <p className="text-sm text-muted-text text-center max-w-sm">
-                  Paycheck decoded. Benefits optimized. Spending protected.
-                  Welcome to your financial dashboard.
-                </p>
-                <Link href="/dashboard">
-                  <Button
-                    size="lg"
-                    className="bg-neon text-background font-semibold text-base px-8 py-6 rounded-2xl hover:bg-neon/90 hover:shadow-[0_0_30px_rgba(57,255,20,0.3)] transition-all duration-300 cursor-pointer"
-                  >
-                    Go to Dashboard
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </Link>
+                <AnimatePresence mode="wait">
+                  {!walletAdded ? (
+                    <motion.button
+                      key="wallet-btn"
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      onClick={() => setWalletAdded(true)}
+                      className="flex items-center gap-3 bg-white text-black font-semibold text-sm px-6 py-3.5 rounded-full hover:bg-white/90 transition-all cursor-pointer"
+                    >
+                      <svg
+                        width="20"
+                        height="24"
+                        viewBox="0 0 170 170"
+                        fill="currentColor"
+                      >
+                        <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.2-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.28 2.13-9.54 3.24-12.8 3.35-4.93.21-9.84-1.96-14.75-6.52-3.13-2.73-7.04-7.41-11.75-14.04-5.04-7.1-9.18-15.33-12.42-24.72-3.47-10.14-5.21-19.97-5.21-29.47 0-10.89 2.35-20.27 7.06-28.13 3.69-6.31 8.6-11.3 14.75-14.95 6.15-3.66 12.79-5.52 19.95-5.7 3.91 0 9.04 1.21 15.43 3.59 6.37 2.39 10.46 3.6 12.25 3.6 1.34 0 5.87-1.42 13.55-4.25 7.27-2.63 13.4-3.72 18.42-3.28 13.62 1.1 23.84 6.47 30.62 16.14-12.18 7.38-18.19 17.72-18.07 31 .11 10.34 3.86 18.95 11.23 25.79 3.34 3.17 7.07 5.62 11.22 7.36-.9 2.61-1.85 5.11-2.86 7.51zM119.11 7.24c0 8.1-2.96 15.67-8.86 22.67-7.12 8.32-15.73 13.13-25.07 12.37a25.2 25.2 0 01-.19-3.07c0-7.78 3.39-16.09 9.4-22.89 3-3.44 6.82-6.31 11.45-8.6 4.62-2.26 8.99-3.51 13.1-3.72.12 1.1.17 2.2.17 3.24z" />
+                      </svg>
+                      Add to Apple Wallet
+                    </motion.button>
+                  ) : (
+                    <motion.div
+                      key="wallet-toast"
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                      className="flex items-center gap-2 px-5 py-3 rounded-full bg-neon/10 border border-neon/20"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-neon" />
+                      <span className="text-sm text-neon font-medium">
+                        Provisioned to Apple Wallet
+                      </span>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
+
+              {/* Go to Dashboard */}
+              {walletAdded && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                  className="flex flex-col items-center gap-3 pt-4 border-t border-white/5"
+                >
+                  <p className="text-sm text-muted-text text-center max-w-sm">
+                    Paycheck decoded. Benefits optimized. Spending protected.
+                    Welcome to your financial dashboard.
+                  </p>
+                  <Link href="/dashboard">
+                    <Button
+                      size="lg"
+                      className="bg-neon text-background font-semibold text-base px-8 py-6 rounded-2xl hover:bg-neon/90 hover:shadow-[0_0_30px_rgba(57,255,20,0.3)] transition-all duration-300 cursor-pointer"
+                    >
+                      Go to Dashboard
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </Link>
+                </motion.div>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
