@@ -26,7 +26,7 @@ export default function SalaryStoryPage() {
           transition={{ duration: 0.4 }}
           className="flex items-center justify-between mb-2"
         >
-          <Link href="/">
+          <Link href="/sync">
             <Button
               variant="ghost"
               size="sm"
@@ -37,7 +37,7 @@ export default function SalaryStoryPage() {
             </Button>
           </Link>
           <span className="text-xs text-muted-text uppercase tracking-widest">
-            Step 2 of 4
+            Step 2 of 5
           </span>
         </motion.div>
 

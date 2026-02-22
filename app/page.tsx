@@ -89,12 +89,12 @@ export default function WelcomePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.5 }}
         >
-          <Link href="/salary-story">
+          <Link href="/login">
             <Button
               size="lg"
               className="bg-neon text-background font-semibold text-base px-8 py-6 rounded-2xl hover:bg-neon/90 hover:shadow-[0_0_30px_rgba(57,255,20,0.3)] transition-all duration-300 cursor-pointer"
             >
-              See My Salary Story
+              Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>

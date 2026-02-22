@@ -15,7 +15,8 @@
       "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && npm run build 2>&1 | tail -25)",
       "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && npm run build 2>&1 | tail -15)",
       "Bash(which vercel && vercel --version)",
-      "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && git init && git add . && git commit -m \"initial: existing codebase before phase 2\")"
+      "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && git init && git add . && git commit -m \"initial: existing codebase before phase 2\")",
+      "Bash(cd \"/Users/gilihorwitz/Desktop/Hackathon 2026\" && git add . && git commit -m \"feat: add simulated login and ADP payroll sync flow\")"
     ]
   }
 }
