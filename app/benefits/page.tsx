@@ -200,7 +200,7 @@ export default function BenefitsPage() {
             </Button>
           </Link>
           <span className="text-xs text-muted-text uppercase tracking-widest">
-            Step 3 of 4
+            Step 3 of 5
           </span>
         </motion.div>
 
@@ -372,15 +372,15 @@ export default function BenefitsPage() {
                     className="flex flex-col items-center gap-4 pt-6 border-t border-white/5"
                   >
                     <p className="text-sm text-muted-text text-center max-w-md">
-                      Benefits sorted. Now let&apos;s protect your take-home pay
-                      with a smart spending card.
+                      Benefits sorted. Now let&apos;s build your spending
+                      blueprint.
                     </p>
-                    <Link href="/card">
+                    <Link href="/budget">
                       <Button
                         size="lg"
                         className="bg-neon text-background font-semibold text-base px-8 py-6 rounded-2xl hover:bg-neon/90 hover:shadow-[0_0_30px_rgba(57,255,20,0.3)] transition-all duration-300 cursor-pointer"
                       >
-                        Get My Spending Card
+                        Build My Budget
                         <ArrowRight className="ml-2 w-5 h-5" />
                       </Button>
                     </Link>

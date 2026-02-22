@@ -84,7 +84,7 @@ export default function CardPage() {
           transition={{ duration: 0.4 }}
           className="flex items-center justify-between mb-2"
         >
-          <Link href="/benefits">
+          <Link href="/budget">
             <Button
               variant="ghost"
               size="sm"
@@ -95,7 +95,7 @@ export default function CardPage() {
             </Button>
           </Link>
           <span className="text-xs text-muted-text uppercase tracking-widest">
-            Step 4 of 4
+            Step 5 of 5
           </span>
         </motion.div>
 
