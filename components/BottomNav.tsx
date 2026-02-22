@@ -12,8 +12,12 @@ const navItems = [
   { href: "/card", icon: CreditCard, label: "Card" },
 ];
 
+const HIDDEN_ROUTES = ["/login", "/sync", "/salary-story", "/benefits", "/budget", "/card"];
+
 export default function BottomNav() {
   const pathname = usePathname();
+
+  if (HIDDEN_ROUTES.includes(pathname)) return null;
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50">
