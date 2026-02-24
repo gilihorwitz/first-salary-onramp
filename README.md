@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+First Salary: The AI Paycheck Optimizer
 
-## Getting Started
+Stop leaving money on the table. First Salary is a financial co-pilot for new grads that audits paychecks to reclaim hidden savings and automates disciplined spending.
 
-First, run the development server:
+💡 The Problem
+New grads lose an average of 22% of their potential wealth to inefficient tax choices and missed 401(k) matches. Most apps track past mistakes; we prevent them.
 
-```bash
+✨ Key Features
+
+Payroll Sync: Securely "decodes" your gross-to-net story via provider integration (Simulated ADP/Plaid).
++2
+
+
+AI Benefit Audit: Detects unclaimed tax-advantaged buckets like HSAs and Commuter FSAs.
++1
+
+
+Guilt-Free Card: Automatically pushes your optimized budget to a virtual card powered by Airwallex.
++2
+
+
+Paycheck Health Score: Real-time efficiency metric (0-100%) and peer benchmarking (e.g., "Top 14% of peers").
++1
+
+🛠️ Tech Stack
+
+Frontend: Next.js (App Router), Tailwind CSS, Framer Motion.
++2
+
+
+Fintech & Data: Airwallex API (Card Issuing), OpenAI GPT-4o (Benefit Decoding).
++1
+
+
+Infrastructure: TypeScript, Vercel.
++1
+
+🏁 Installation & Setup
+Clone the Repo:
+
+Bash
+git clone https://github.com/gilihorwitz/first-salary-onramp
+cd first-salary-onramp
+Install Dependencies:
+
+Bash
+npm install
+Run Locally:
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🎯 Usage Example
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Login: Use a demo email to enter the 6-step onboarding.
++1
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Sync: Observe the AI auditing your benefits catalog in real-time.
++1
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Optimize: Confirm the AI's suggestions to "claim" hidden salary.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Spend: Use the virtual card for daily expenses, knowing your rent and 401(k) are already safe.
 
-## Deploy on Vercel
+🗺️ Roadmap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Phase 1: Real-time Plaid Payroll integration for live tax jurisdictions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Phase 2: Automated benefit enrollment (Agentic Action).
+
+
+Phase 3: Multi-month trend analysis for long-term wealth projections
